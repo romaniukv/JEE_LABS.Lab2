@@ -4,7 +4,7 @@
 <html>
     <head>
         <title>Online Library</title>
-        <link href = "catalog.css" rel = "stylesheet">
+        <link href = "../css/catalog.css" rel = "stylesheet">
     </head>
     <body>
         <%@ include file="topMenu.jsp"%>

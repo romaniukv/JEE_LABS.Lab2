@@ -28,7 +28,7 @@ public class CatalogServlet extends HttpServlet{
             req.setAttribute("books", books);
         }
 
-        req.getRequestDispatcher("/catalog.jsp").forward(req, resp);
+        req.getRequestDispatcher("/views/catalog.jsp").forward(req, resp);
     }
 
 }

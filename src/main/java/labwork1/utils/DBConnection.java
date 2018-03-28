@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class DBConnection {
-    private static DataSource dataSource;
+    private static ComboPooledDataSource dataSource;
     private static final String DRIVER_NAME;
     private static final String URL;
     private static final String USER_NAME;
@@ -29,7 +29,7 @@ public class DBConnection {
         return dataSource.getConnection();
     }
 
-    private static DataSource setupDataSource() {
+    private static ComboPooledDataSource setupDataSource() {
         ComboPooledDataSource cpds = new ComboPooledDataSource();
         try {
             cpds.setDriverClass(DRIVER_NAME);

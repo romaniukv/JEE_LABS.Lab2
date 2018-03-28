@@ -22,7 +22,7 @@ public class AddBookServlet extends HttpServlet {
         CategoryDAO categoryDAO = new CategoryDAO();
         List<Category> categories = categoryDAO.findAll();
         req.getSession().setAttribute("categories", categories);
-        req.getRequestDispatcher("addBook.jsp").forward(req, resp);
+        req.getRequestDispatcher("/views/addBook.jsp").forward(req, resp);
 
     }
 
@@ -41,6 +41,6 @@ public class AddBookServlet extends HttpServlet {
         BookDAO bookDAO = new BookDAO();
         bookDAO.create(new Book(categoryId, name, author, year, numOfPages, price, description, availability, image));
 
-        req.getRequestDispatcher("addBook.jsp").forward(req, resp);
+        req.getRequestDispatcher("/views/addBook.jsp").forward(req, resp);
     }
 }
