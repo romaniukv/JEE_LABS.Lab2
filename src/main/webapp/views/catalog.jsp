@@ -16,40 +16,31 @@
                      <a href="${pageContext.request.contextPath}/catalog?id=${category.id}"> ${category.categoryName} </a>
                 </c:forEach>
             </div>
+            <table class="order-table">
+                <tr>
+                    <th>Image</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Available</th>
+                </tr>
 
-
-            <c:forEach var="book" items="${requestScope.books}">
-
-                <img src="${book.image}" alt="${book.name}">
-
-                <table border="0">
+                <c:forEach var="book" items="${requestScope.books}">
                     <tr>
-                        <td>Name: </td>
+                        <td><img src="${book.image}" alt="${book.name}"></td>
+                        <td>${book.id}</td>
                         <td>${book.name}</td>
-                    </tr>
-                    <tr>
-                        <td>Author: </td>
                         <td>${book.author}</td>
-                    </tr>
-                    <tr>
-                        <td>Year: </td>
                         <td>${book.year}</td>
-                    </tr>
-                    <tr>
-                        <td>Price: </td>
                         <td>${book.price} $</td>
-                    </tr>
-                    <tr>
-                        <td>Description: </td>
                         <td>${book.description}</td>
-                    </tr>
-                    <tr>
-                        <td>Available: </td>
                         <td>${book.available ? "Yes" : "No"}</td>
                     </tr>
-                </table>
-                <hr/>
-            </c:forEach>
+                </c:forEach>
+            </table>
         </div>
     </body>
 </html>
