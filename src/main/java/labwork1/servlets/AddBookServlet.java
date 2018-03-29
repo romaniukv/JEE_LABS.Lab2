@@ -41,6 +41,6 @@ public class AddBookServlet extends HttpServlet {
         BookDAO bookDAO = new BookDAO();
         bookDAO.create(new Book(categoryId, name, author, year, numOfPages, price, description, availability, image));
 
-        req.getRequestDispatcher("/views/addBook.jsp").forward(req, resp);
+        req.getRequestDispatcher("/views/catalog.jsp").forward(req, resp);
     }
 }
