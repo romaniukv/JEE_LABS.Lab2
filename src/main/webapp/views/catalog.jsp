@@ -11,7 +11,7 @@
     <body>
         <%@ include file="topMenu.jsp"%>
         <div class="main">
-            <div class="categories">
+            <div class="category">
                 <c:forEach var="category" items="${sessionScope.categories}">
                      <a href="${pageContext.request.contextPath}/catalog?id=${category.id}"> ${category.categoryName} </a>
                 </c:forEach>
