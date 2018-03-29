@@ -4,9 +4,9 @@
 <html>
     <head>
         <title>Online Library</title>
-        <link href = "../css/categories.css" rel = "stylesheet">
-        <link href = "../css/table-style.css" rel = "stylesheet">
-        <link href = "../css/topMenu.css" rel = "stylesheet">
+        <link href="<c:url value="/resources/css/categories.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/table-style.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/topMenu.css" />" rel="stylesheet">
     </head>
     <body>
         <%@ include file="topMenu.jsp"%>
