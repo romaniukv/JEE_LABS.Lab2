@@ -30,7 +30,8 @@
 
                 <c:forEach var="book" items="${requestScope.books}">
                     <tr>
-                        <td><img src="${book.image}" alt="${book.name}"></td>
+                        <td><img src="${pageContext.request.contextPath}/resources/images/${book.image}" alt="${book.name}"
+                        width="80" height="130"></td>
                         <td>${book.id}</td>
                         <td>${book.name}</td>
                         <td>${book.author}</td>
